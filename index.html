@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date & Time</title>
+    <style>
+        body{
+            background-color: #A9C9FF;
+            background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%);
+            height: 100vh;
+
+        }
+        .main{
+        
+            border: 2px solid black;
+            text-align: center;
+            height: 400px;
+            width: 500px;
+            margin: 80px auto;
+            border-radius: 10px;
+        }
+        .ip{
+            font-family: sans-serif;
+            font-size: 25px;
+            border-radius: 10px;
+            
+        }
+        .y{
+            height: 40px;
+            width: 70px;
+            border: 2px solid black;
+            margin: 40px 20px;
+            display: inline-block;
+            padding: 5px;
+            font-size: 20px;
+            border-radius: 10px;
+        }
+        .btn{
+            padding: 20px;
+            display: block;
+            margin: 10px auto;
+            border-radius: 15px;
+            width: 50%;
+            font-size: 20px;
+        }
+        .btn:hover{
+            background-color: black;
+            color: white;
+        }
+        .ipl{
+            height: 30px;
+            width: 170px;
+            border-radius: 10px;
+            padding: 5px;
+            font-size: 20px;
+        }
+        .undo{
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body >
+    <div class="main">
+    <h1>Date & Time Calculate</h1>
+
+    <div >
+        
+        <label for="date" class="ip" > Enter Your Birthday:</label>
+        <input type="date" id="input1" class="ipl">
+    </div>
+    <div class="y">
+        <span id="year" class="undo">year</span><br>
+         
+    </div>
+    <div class="y">
+        <span id="month" class="undo">month</span><br>
+        
+    </div>
+    <div class="y">
+        <span id="days" class="undo">Days</span><br>
+       
+    </div>
+    <span id="some-miss"></span>
+
+<button class="btn" onclick="sonya()">Calculate</button>
+
+  </div>
+    
+</body>
+
+    
+<script>
+    function sonya(){
+       
+        const suraj =  document.getElementById("input1").value;
+        const karan = new Date(suraj);
+        const hii = new Date(); 
+        const result = hii.getFullYear() - karan.getFullYear();
+        const result1 = hii.getMonth() - karan.getMonth();
+        const result2 = hii.getDate() - karan.getDate();
+       document.getElementById("year").innerText =`year.. ${result}`;
+       document.getElementById("month").innerText =`month..   ${result1}`;
+       document.getElementById("days").innerText =`days..   ${result2}`;
+            
+            
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
